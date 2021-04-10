@@ -1,21 +1,13 @@
 import { AiFillStar } from 'react-icons/all'
 
-const starred = [
-    {
-        id: 1,
-        channel: 'javascript',
-    },
-    {
-        id: 2,
-        channel: 'react',
-    },
-    {
-        id: 3,
-        channel: 'react',
-    },
-]
-
 function Starred() {
+    const starred = [
+        {
+            id: 1,
+            channel: 'futebol',
+        },
+    ]
+
     return (
         <div className='mt-10'>
             <div className='flex'>
@@ -26,7 +18,7 @@ function Starred() {
             <div className='flex flex-col pl-1'>
             {
                 starred.map(_starred => (
-                    <a key={ _starred.id } href='/' className='mt-1 text-gray-300'># { _starred.channel }</a>
+                    <a key={ _starred.id } href='/' className='mt-1 p-1 text-gray-300 bg-brand-topic'># { _starred.channel }</a>
                 ))
             }
             </div>

@@ -2,6 +2,7 @@ module.exports = {
   brand: {
     main: '#FEFEFE',
     topic: '#412F44',
+    topicselect: '#534254',
     info: '#8296FB',
     graydark: '#EEEAEF',
     warning: '#E4B52E',

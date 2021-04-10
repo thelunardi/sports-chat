@@ -9,7 +9,7 @@ function Message() {
             </div>
             <div className='flex flex-row justify-between'>
                 <button className='px-6 py-2 mt-2 bg-brand-danger w-full rounded-md focus:outline-none'>
-                    Send Message
+                    Send Reply
                 </button>
                 <button className='ml-2 px-6 py-2 mt-2 bg-brand-warning w-full rounded-md focus:outline-none'>
                     Update Media
