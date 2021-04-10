@@ -8,4 +8,11 @@ body,
 #app {
     width: 100%;
     height: 100%;
+    overflow-y: hidden;
+}
+
+.content {
+    height: 70vh;
+    min-height: 70vh;
+    overflow-y: auto;
 }
