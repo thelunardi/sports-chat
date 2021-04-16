@@ -1,18 +1,19 @@
+import { useEffect, useState, useCallback } from 'react'
 import { AiOutlinePlus, CgArrowsExchange } from 'react-icons/all'
 
+import http from '../../../utils/axios'
+
 function Channels() {
-    const channel = [
-        {
-            id: 1,
-            name: 'futebol',
-            selected: true,
-        },
-        {
-            id: 2,
-            name: 'basquete',
-            selected: false,
-        },
-    ]
+    const [channels, setChannels] = useState([])
+
+    const getChannels = useCallback(async () => {
+        const response = await http.get('api/user/channels')
+        setChannels(response.data.channels)
+    }, [setChannels])
+
+    useEffect(() => {
+        getChannels()
+    }, [getChannels])
 
     return (
         <div className="mt-10">
@@ -27,7 +28,7 @@ function Channels() {
             </div>
             <div className="flex flex-col pl-1">
                 {
-                    channel.map(_channel => (
+                    channels.map(_channel => (
                         _channel.selected ?
                             <a
                                 key={ _channel.id }

@@ -1,13 +1,13 @@
 import Starred from './Starred'
 import Channels from './Channels'
-import Direct from './Direct'
+import Contact from './Contact'
 
 function Menu () {
     return (
         <div className='items-start'>
             <Starred />
             <Channels />
-            <Direct />
+            <Contact />
         </div>
     )
 }
